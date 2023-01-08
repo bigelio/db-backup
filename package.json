@@ -1,0 +1,26 @@
+{
+  "name": "db-backup",
+  "version": "1.0.0",
+  "description": "Mongodb backup script with nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwandasell/db-backup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rwandasell/db-backup/issues"
+  },
+  "homepage": "https://github.com/rwandasell/db-backup#readme",
+  "dependencies": {
+    "node-cron": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
