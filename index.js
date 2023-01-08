@@ -8,6 +8,8 @@ const cron = require("node-cron");
 
 const DB_NAME = process.env.DB_NAME;
 const ARCHIVE_PATH = path.join(__dirname, "backup", `${DB_NAME}.gzip`);
+const PORT=process.env.PORT;
+const URL=process.env.URL;
 /**
  * run cron job “At every mid-night.”
  */
@@ -21,6 +23,8 @@ cron.schedule("0 0 * * * *", () => backUpMongodb());
 const backUpMongodb = () => {
   const child = spawn("mongodump", [
     `--db=${DB_NAME}`,
+    `--url=${URL}`,
+    `--port=${PORT}`,
     `--archive=${ARCHIVE_PATH}`,
     `gzip`,
   ]);
