@@ -8,8 +8,8 @@ const cron = require("node-cron");
 
 const DB_NAME = process.env.DB_NAME;
 const ARCHIVE_PATH = path.join(__dirname, "backup", `${DB_NAME}.gzip`);
-const PORT=process.env.PORT;
-const URL=process.env.URL;
+const PORT = process.env.PORT || 27017;
+const URL = process.env.URL || "localhost";
 /**
  * run cron job “At every mid-night.”
  */
